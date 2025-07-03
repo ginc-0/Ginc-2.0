@@ -1,76 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GINC — Tech Made Simple</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet"/>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-    body { background: #f4f9ff; color: #222; line-height: 1.6; }
-    header { background: #002f6c; color: white; padding: 100px 20px; text-align: center; }
-    .hero-text { font-size: 32px; font-weight: 600; }
-    .typewriter span { color: #33c1ff; font-weight: bold; }
-    .section { padding: 60px 20px; max-width: 1000px; margin: auto; }
-    .section h2 { font-size: 28px; margin-bottom: 20px; color: #002f6c; }
-    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; }
-    .service-box { background: #ffffff; border-radius: 10px; padding: 20px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
-    .service-box i { font-size: 30px; color: #0077ff; margin-bottom: 10px; }
-    .testimonial { background: #e8f2fc; padding: 30px; border-left: 4px solid #0077ff; margin-bottom: 20px; }
-    footer { background: #002f6c; color: white; text-align: center; padding: 20px; }
-  </style>
+    <meta charset="UTF-8">
+    <title>GINC - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Welcome to <strong>GINC</strong></h1>
-    <div class="hero-text typewriter"><p><span id="typed"></span></p></div>
-  </header>
-
-  <section class="section">
-    <h2>What We Do</h2>
-    <div class="services">
-      <div class="service-box"><i class="fas fa-code"></i><p>Web Development</p></div>
-      <div class="service-box"><i class="fas fa-mobile-alt"></i><p>App Design</p></div>
-      <div class="service-box"><i class="fas fa-lightbulb"></i><p>Brand Strategy</p></div>
-      <div class="service-box"><i class="fas fa-shield-alt"></i><p>Security & Hosting</p></div>
-      <div class="service-box"><i class="fas fa-chart-line"></i><p>Digital Growth</p></div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Client Feedback</h2>
-    <div class="testimonial"><p>“GINC transformed our business — professional, fast, and creative.”</p><small>— A. Mwangi, Nairobi</small></div>
-    <div class="testimonial"><p>“Reliable tech support and sleek design. Highly recommend.”</p><small>— C. Kamau, Kisumu</small></div>
-  </section>
-
-  <footer><p>&copy; <span id="year"></span> GINC. Built with excellence.</p></footer>
-
-  <script>
-    const words = ["We Build.", "We Innovate.", "We Simplify."];
-    let i = 0, j = 0, currentWord = '', isDeleting = false;
-    function type() {
-      const typed = document.getElementById("typed");
-      currentWord = words[i];
-      if (isDeleting) {
-        typed.textContent = currentWord.substring(0, j--);
-      } else {
-        typed.textContent = currentWord.substring(0, j++);
-      }
-      if (!isDeleting && j === currentWord.length + 1) {
-        isDeleting = true;
-        setTimeout(type, 1000);
-      } else if (isDeleting && j === 0) {
-        isDeleting = false;
-        i = (i + 1) % words.length;
-        setTimeout(type, 300);
-      } else {
-        setTimeout(type, isDeleting ? 50 : 100);
-      }
-    }
-    type();
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    <header class="hero">
+        <h1>Welcome to GINC</h1>
+        <p>Your digital solutions partner.</p>
+        <a class="cta-button" href="projects.html">📂 View Our Work</a>
+    </header>
+    <footer>
+        <p>&copy; 2025 GINC. All rights reserved.</p>
+    </footer>
 </body>
 </html>

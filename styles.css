@@ -1,0 +1,53 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; padding: 0;
+    background-color: #f4faff;
+    color: #111;
+}
+.hero, .project-header {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+.cta-button {
+    background: #00aaff;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+    gap: 20px;
+}
+.project-card {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+}
+.project-card img {
+    width: 100%;
+    height: auto;
+}
+.project-card h3 {
+    margin: 10px;
+}
+.project-card p {
+    margin: 10px;
+    font-size: 0.9em;
+    color: #333;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85em;
+    color: #444;
+}
